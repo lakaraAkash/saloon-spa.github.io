@@ -1,0 +1,428 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE php>
+<php lang="zxx">
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/php; charset=utf-8" />
+    <meta name="keywords" content="Optical Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <!-- shop css -->
+    <link href="css/shop.css" type="text/css" rel="stylesheet" media="all">
+    <!-- footer stylesheet -->
+    <link href="css/footer4.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+	<!-- font-awesome icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">    
+    <!-- //Custom Theme files -->
+	 <!-- online-fonts -->
+     <!-- logo -->
+    <link href="//fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <!-- titles -->
+    <link href="//fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+    <!-- body -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <!-- //online-fonts -->
+ </head>
+
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div id="home">
+        <!-- header -->
+        <!-- navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="main-nav">
+                <div class="container">
+
+                    <div class="navbar-header page-scroll">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Salon and spa</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h1>
+                            <a class="navbar-brand" href="index.php">Salon and spa</a>
+                        </h1>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse nav-right">
+                        <ul class="nav navbar-nav navbar-left cl-effect-15">
+                            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                            <li class="hidden">
+                                <a class="page-scroll" href="#page-top"></a>
+                            </li>
+                            <li>
+                                <a href="index.php">Home</a>
+                            </li>
+                            <li>
+                                <a href="about.php">about us</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle effect-3" data-toggle="dropdown">shop
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="shop.php">product catalog</a>
+                                    </li>
+                                    <li>
+                                        <a href="single_product.php">single product</a>
+                                    </li>
+                                    <li>
+                                        <a href="checkout.php">checkout</a>
+                                    </li>
+									<li>
+                                        <a href="payment.php">Payment</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle effect-3" data-toggle="dropdown">footers
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="footer.php">Default</a>
+                                    </li>
+                                    <li>
+                                        <a href="footer1.php">variant1</a>
+                                    </li>
+                                    <li>
+                                        <a href="footer2.php">variant2</a>
+                                    </li>
+                                    <li>
+                                        <a href="footer3.php">variant3</a>
+                                    </li>
+                                    <li>
+                                        <a href="footer4.php">variant4</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="contact.php">Contact us</a>
+                            </li>
+                            <li>
+                                <a href="login.php" title="SignIn & SignUp">
+                                    <span class="fa fa-user nav-icon" aria-hidden="true"></span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- search-bar -->
+                        <div class="search-bar-agileits">
+                            <div class="cd-main-header">
+                                <ul class="cd-header-buttons">
+                                    <li>
+                                        <a class="cd-search-trigger" href="#cd-search">
+                                            <span></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- cd-header-buttons -->
+                            </div>
+                            <div id="cd-search" class="cd-search">
+                                <form action="#" method="post">
+                                    <input name="Search" type="search" placeholder="Type and Hit Enter...">
+                                </form>
+                            </div>
+                        </div>
+                        <!-- //search-bar ends here -->
+                        <!-- shopping cart -->
+                        <div class="cart-mainf">
+                            <div class="chrcart chrcart2 cart cart Salon and spa_1">
+                                <form action="#" method="post" class="last">
+                                    <input type="hidden" name="cmd" value="_cart">
+                                    <input type="hidden" name="display" value="1">
+                                    <button class="top_chr_cart" type="submit" name="submit" value="">
+                                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- //shopping cart ends here -->
+                    </div>
+                    <!-- /.navbar-collapse -->
+                    <div class="clearfix"></div>
+                </div>
+                <!-- /.container -->
+            </div>
+        </nav>
+        <!-- //navbar ends here -->
+        <!-- banner -->
+        <div class="banner-bg-inner">
+            <!-- banner-text -->
+            <div class="banner-text-inner">
+                <div class="container">
+                    <h2 class="title-inner">
+                        Salon and spa
+                    </h2>
+
+                </div>
+            </div>
+            <!-- //banner-text -->
+        </div>
+        <!-- //banner -->
+        <!-- breadcrumbs -->
+        <div class="crumbs text-center">
+            <div class="container">
+                <div class="row">
+                    <ul class="btn-group btn-breadcrumb bc-list">
+                        <li class="btn btn1">
+                            <a href="index.php">
+                                <i class="glyphicon glyphicon-home"></i>
+                            </a>
+                        </li>
+                        <li class="btn btn2">
+                            <a href="footer.php">Default Footer</a>
+                        </li>
+                        <li class="btn btn3">
+                            <a href="footer4.php">Variant 4</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--//breadcrumbs ends here-->
+        <!--/footer-bottom-->
+        <div class="footerv4-w3ls">
+            <h4 class="rad-txt text-center">
+                <span class="abtxt1">elegant</span>
+                <span class="abtext">footer layouts</span>
+            </h4>
+            <!-- footerv4-top -->
+            <div class="footerv4-top">
+                <div class="container">
+                    <ul class="bottom-links-agile">
+                        <li>
+                            <a href="index.php">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.php">About Us</a>
+                        </li>
+                        <li>
+                            <a href="shop.php">Shop</a>
+                        </li>
+                        <li>
+                            <a href="contact.php">Contact</a>
+                        </li>
+                        <li>
+                            <a href="login.php" class="text-right">login</a>
+                        </li>
+
+                    </ul>
+
+
+
+                    <div class="col-md-3 col-sm-6 footv4-left">
+                        <h3>About Us</h3>
+                        <h4>
+                            <a href="index.php">Salon and spa</a>
+                        </h4>
+                                            <div class="footerv4-social">
+                            <h3>stay connected</h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-facebook icon_facebook"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-twitter icon_twitter"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-dribbble icon_dribbble"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-google-plus icon_g_plus"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //footer social -->
+
+                    </div>
+                    <div class="col-md-3 col-sm-6 footv4-content">
+                        <h3>featured content</h3>
+                        <ul class="v4-content">
+                            <li>
+                                <a href="#">research assistance</a>
+                            </li>
+                            <li>
+                                <a href="#">checkout</a>
+                            </li>
+                            <li>
+                                <a href="#">Salon and spa & E-Salon and spa</a>
+                            </li>
+                            <li>
+                                <a href="#">archieves</a>
+                            </li>
+                            <li>
+                                <a href="#">e-Reference </a>
+                            </li>
+                            <li>
+                                <a href="#">journals</a>
+                            </li>
+                            <li>
+                                <a href="#">press releases</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 footv4-left fv4-g3">
+                        <h3>Latest releases</h3>
+                        <ul class="v4-rel">
+                            <li>
+                                <a href="#">
+                                    Lorem ipsum dolor sit amet.Cras rutrum iaculis enim, non mattis.
+                                </a>
+                                <p>February 15, 2020</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Lorem ipsum dolor sit amet.Cras rutrum iaculis enim, non mattis.
+                                </a>
+                                <p>February 18, 2020</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Lorem ipsum dolor sit amet.Cras rutrum iaculis enim, non mattis.
+                                </a>
+                                <p>February 20, 2020</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Lorem ipsum dolor sit amet.Cras rutrum iaculis enim, non mattis.
+                                </a>
+                                <p>February 25, 2020</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 footv4-left">
+                        <h3>contact us</h3>
+                        <form action="#" method="post">
+                            <input type="text" placeholder="Your name" name="name" required>
+                            <input type="email" placeholder="Your Email" name="email" required>
+                            <textarea placeholder="Your message"></textarea>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- /footerv4-top -->
+        </div>
+        <div class="cpy-right">
+            <p>© 2020 box selling. All rights reserved | Design by
+                <a href="http://w3layouts.com"> W3layouts.</a>
+            </p>
+        </div>
+    </div>
+    <!-- //home -->
+    <!-- js -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <!-- //js -->
+    <!--search jQuery-->
+    <script src="js/main.js"></script>
+    <!--search jQuery-->
+    
+	<!-- dropdown nav -->
+	<script>
+		$(document).ready(function () {
+			$(".dropdown").hover(
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
+					$(this).toggleClass('open');
+				},
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
+					$(this).toggleClass('open');
+				}
+			);
+		});
+	</script>
+	<!-- //dropdown nav -->
+    <!-- cart-js -->
+    <script src="js/minicart.js"></script>
+    <script>
+        chr.render();
+
+        chr.cart.on('new_checkout', function (evt) {
+            var items, len, i;
+
+            if (this.subtotal() > 0) {
+                items = this.items();
+
+                for (i = 0, len = items.length; i < len; i++) {}
+            }
+        });
+    </script>
+    <!-- //cart-js -->
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/scrolling-nav.js"></script>
+    <!-- //fixed-scroll-nav-js -->
+    <!--//scripts-->
+    <!-- //gallery-js  -->
+    <!-- start-smooth-scrolling -->
+    <script src="js/move-top.js"></script>
+    <script src="js/easing.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+
+                $('php,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+    <script>
+        $(document).ready(function () {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear' 
+            };
+            */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <script src="js/SmoothScroll.min.js"></script>
+    <!-- //smooth-scrolling-of-move-up -->
+    <!-- Bootstrap core JavaScript
+ ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</php>

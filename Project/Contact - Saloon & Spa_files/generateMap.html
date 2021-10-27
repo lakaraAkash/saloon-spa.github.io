@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- saved from url=(0264)https://www.weebly.com/ajax/apps/generateMap.php?map=google&elementid=579054656852756912&ineditor=0&control=3&width=auto&height=250px&overviewmap=0&scalecontrol=0&typecontrol=0&zoom=15&long=77.29790070000001&lat=28.5900103&domain=www&point=1&align=1&reseller=false -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1){display:none}.gm-control-active:hover>img:nth-child(2),.gm-control-active:active>img:nth-child(3){display:block}
+</style><link type="text/css" rel="stylesheet" href="./css(5)"><style>.gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}
+</style><style>.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px;box-sizing:border-box}
+</style><style>@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style>.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+</style><style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style>
+		<title>Google Maps Output</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		
+		<style>
+			html, body, #mapContainer {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+			}
+
+			#mapContainer {
+				width: 100%;
+				text-align: center;
+			}
+
+			a {
+				color: #06C;
+				text-decoration: none;
+			}
+
+			a:visited {
+				color: #06C;
+			}
+		</style>
+		<script type="text/javascript" src="./js"></script>
+		<script type="text/javascript">
+			//<![CDATA[
+
+			// send a cross domain iframe mesage to the parent to resize the frame to this height
+			var resizeMessage = function(event) {
+				var imageHeight = document.getElementById('mapContainer').clientHeight;
+
+				window.parent.postMessage(
+					imageHeight,
+					'*'
+				);
+			};
+
+			function setMarkerIcon(point) {
+				const svg = createMarkerSvg();
+				point.setIcon({
+					url: 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg),
+					scaledSize: new google.maps.Size(29, 48),
+				});
+			}
+
+			function createMarkerSvg() {
+				return '<svg width="29" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".1" d="M14.277 48c2.38 0 4.307-1.473 4.307-3.29s-1.928-3.29-4.306-3.29c-2.38 0-4.307 1.473-4.307 3.29S11.899 48 14.277 48z" fill="#000"/><path opacity=".1" d="M14.344 46.764c1.474 0 2.668-.911 2.668-2.036 0-1.124-1.194-2.035-2.668-2.035-1.474 0-2.668.911-2.668 2.035 0 1.125 1.194 2.036 2.668 2.036z" fill="#000"/><path d="M4.672 4.359A13.694 13.694 0 0 1 14.29.378c1.794.002 3.57.355 5.227 1.039a13.655 13.655 0 0 1 4.429 2.95 13.557 13.557 0 0 1 2.953 4.409 13.489 13.489 0 0 1 1.029 5.195c-.011.749-.087 1.496-.226 2.232h0l-.002.008a13.392 13.392 0 0 1-2.153 5.35l-.007.01-.006.01a74.078 74.078 0 0 1-1.936 3.095l-.194.279c-4.03 5.783-8.12 11.654-8.407 19.443a1.177 1.177 0 0 1-.283.522c-.157.168-.318.243-.447.243-.298 0-.605-.217-.731-.771-.37-7.851-4.415-13.823-8.543-19.714-.719-1.12-1.389-2.169-1.981-3.172l-.006-.01-.006-.01A13.128 13.128 0 0 1 .91 16.14l-.001-.008-.002-.008a11.762 11.762 0 0 1-.225-2.205 13.52 13.52 0 0 1 3.99-9.56z" fill="#D85040" stroke="#C74D40" stroke-width=".756"/><path d="M14.3 2.454c2.443.036 4.841.667 6.984 1.837a14.933 14.933 0 0 1 5.305 4.874A13.118 13.118 0 0 0 21.744 3.1 13.244 13.244 0 0 0 14.299.811c-2.657 0-5.252.798-7.445 2.288A13.119 13.119 0 0 0 2.01 9.165a14.933 14.933 0 0 1 5.305-4.874c2.142-1.17 4.54-1.801 6.984-1.837z" fill="rgba(255, 255, 255, 0.2)"/><path d="M14.206 18.876a5.06 5.06 0 0 0 2.803-.84 5.013 5.013 0 0 0 1.86-2.245 4.978 4.978 0 0 0-1.09-5.461 5.067 5.067 0 0 0-5.495-1.083 5.03 5.03 0 0 0-2.26 1.848 4.984 4.984 0 0 0 .631 6.315 5.054 5.054 0 0 0 3.551 1.466z" fill="#8A1E16"/></svg>';
+			}
+
+			function gLoad() {
+				var touchSupported = (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch),
+						forceTouch = false;
+
+				var forceMapDrag = false;
+
+				var myLatLng = new google.maps.LatLng(28.5900103, 77.29790070000001);
+				var mapOptions = {
+					scrollwheel: false,
+					center: myLatLng,
+					zoom: 15,
+					panControl: false, zoomControl: true, zoomControlOptions: { style: google.maps.ZoomControlStyle.SMALL },
+					scaleControl: false,
+					mapTypeControl: false,
+					streetViewControl: false,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					draggable: false				};
+
+				if ((touchSupported || forceTouch) && !forceMapDrag) {
+					mapOptions.draggable = false;
+					mapOptions.panControl = false;
+					mapOptions.scrollwheel = false;
+					mapOptions.zoomControlOptions = {style: google.maps.ZoomControlStyle.SMALL};
+					mapOptions.zoomControl = true;
+				}
+
+				// Use pre-v3.22 controls until the element can be updated with options for the new controls
+				google.maps.controlStyle = 'azteca';
+
+				function renderMap(options) {
+					var map = new google.maps.Map(document.getElementById("map"), options);
+					var hasMapPoint = true;
+
+					var isMarkerFixedInCenter = false;
+
+					if (hasMapPoint) {
+						var point = new google.maps.Marker({
+							position: myLatLng,
+							map: map,
+							optimized: false
+						});
+						setMarkerIcon(point);
+					}
+
+					
+					// Maps loaded hidden (like in an accordion) don't center property as their width is often detected as 0.
+					// Detect when the iFrame "resizes" and reset the center
+					google.maps.event.addDomListener(window, 'resize', function() {
+						google.maps.event.trigger(map, 'resize');
+						map.setCenter(myLatLng);
+					});
+					var SET_TIMEOUT_MS = 200;
+					if (isMarkerFixedInCenter) {
+						google.maps.event.addListener(map, 'center_changed', function() {
+							// 0.2 seconds after the center of the map has changed,
+							// set back the marker position.
+							window.setTimeout(function() {
+								var center = map.getCenter();
+								point.setPosition(center);
+							}, SET_TIMEOUT_MS);
+						});
+
+						google.maps.event.addListener(map, 'dragend', function(evt) {
+							// Wait for the center to be changed before saving the Lat/Lng
+							window.setTimeout(function() {
+								var url = (window.location != window.parent.location)
+									? document.referrer
+									: document.location.href;
+								var center = map.getCenter();
+								var postData = {
+									lat: center.lat(),
+									lng: center.lng(),
+									message: 'marker_position_update_579054656852756912'
+								}
+								window.parent.postMessage(JSON.stringify(postData), url);
+							}, SET_TIMEOUT_MS + 25);
+
+						});
+					}
+
+					map.addListener('click', function() {
+						var url = (window.location != window.parent.location)
+							? document.referrer
+							: document.location.href;
+						window.parent.postMessage('map_click_event_579054656852756912', url);
+					});
+				};
+
+				var mapZoomScale = 0;
+				if (mapZoomScale > 0) {
+					var maxZoomService = new google.maps.MaxZoomService();
+					maxZoomService.getMaxZoomAtLatLng({
+						lat: parseFloat(28.5900103),
+						lng: parseFloat(77.29790070000001),
+					}, function (response)  {
+						const success = response.status === 'OK';
+						var maxZoomLevel = success ? response.zoom : 18;
+						var zoomLevel = Math.round(maxZoomLevel * (mapZoomScale / 100));
+						zoomLevel = zoomLevel < 1 ? mapOptions.zoom : zoomLevel;
+						mapOptions.zoom = zoomLevel;
+						renderMap(mapOptions);
+					});
+				} else {
+					renderMap(mapOptions);
+				}
+			}
+
+			//]]>
+		</script>
+
+	<script type="text/javascript" charset="UTF-8" src="./common.js.download"></script><script type="text/javascript" charset="UTF-8" src="./util.js.download"></script><script type="text/javascript" charset="UTF-8" src="./map.js.download"></script><script type="text/javascript" charset="UTF-8" src="./marker.js.download"></script><script type="text/javascript" charset="UTF-8" src="./onion.js.download"></script><script type="text/javascript" charset="UTF-8" src="./controls.js.download"></script></head>
+	<body onload="gLoad();" style="margin: 0; padding: 0;">
+
+	<div id="mapContainer">
+		<div id="map" style="height: 250px; max-width: 100%; position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: pan-x pan-y;"><div style="z-index: 1; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 985; transform: matrix(1, 0, 0, 1, -212, -110);"><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; z-index: 985; transform: matrix(1, 0, 0, 1, -212, -110);"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 0px;"></div></div></div><div style="width: 29px; height: 48px; overflow: hidden; position: absolute; left: -15px; top: -48px; z-index: 0;"><img alt="" src="data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2229%22%20height%3D%2248%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20opacity%3D%22.1%22%20d%3D%22M14.277%2048c2.38%200%204.307-1.473%204.307-3.29s-1.928-3.29-4.306-3.29c-2.38%200-4.307%201.473-4.307%203.29S11.899%2048%2014.277%2048z%22%20fill%3D%22%23000%22%2F%3E%3Cpath%20opacity%3D%22.1%22%20d%3D%22M14.344%2046.764c1.474%200%202.668-.911%202.668-2.036%200-1.124-1.194-2.035-2.668-2.035-1.474%200-2.668.911-2.668%202.035%200%201.125%201.194%202.036%202.668%202.036z%22%20fill%3D%22%23000%22%2F%3E%3Cpath%20d%3D%22M4.672%204.359A13.694%2013.694%200%200%201%2014.29.378c1.794.002%203.57.355%205.227%201.039a13.655%2013.655%200%200%201%204.429%202.95%2013.557%2013.557%200%200%201%202.953%204.409%2013.489%2013.489%200%200%201%201.029%205.195c-.011.749-.087%201.496-.226%202.232h0l-.002.008a13.392%2013.392%200%200%201-2.153%205.35l-.007.01-.006.01a74.078%2074.078%200%200%201-1.936%203.095l-.194.279c-4.03%205.783-8.12%2011.654-8.407%2019.443a1.177%201.177%200%200%201-.283.522c-.157.168-.318.243-.447.243-.298%200-.605-.217-.731-.771-.37-7.851-4.415-13.823-8.543-19.714-.719-1.12-1.389-2.169-1.981-3.172l-.006-.01-.006-.01A13.128%2013.128%200%200%201%20.91%2016.14l-.001-.008-.002-.008a11.762%2011.762%200%200%201-.225-2.205%2013.52%2013.52%200%200%201%203.99-9.56z%22%20fill%3D%22%23D85040%22%20stroke%3D%22%23C74D40%22%20stroke-width%3D%22.756%22%2F%3E%3Cpath%20d%3D%22M14.3%202.454c2.443.036%204.841.667%206.984%201.837a14.933%2014.933%200%200%201%205.305%204.874A13.118%2013.118%200%200%200%2021.744%203.1%2013.244%2013.244%200%200%200%2014.299.811c-2.657%200-5.252.798-7.445%202.288A13.119%2013.119%200%200%200%202.01%209.165a14.933%2014.933%200%200%201%205.305-4.874c2.142-1.17%204.54-1.801%206.984-1.837z%22%20fill%3D%22rgba(255%2C%20255%2C%20255%2C%200.2)%22%2F%3E%3Cpath%20d%3D%22M14.206%2018.876a5.06%205.06%200%200%200%202.803-.84%205.013%205.013%200%200%200%201.86-2.245%204.978%204.978%200%200%200-1.09-5.461%205.067%205.067%200%200%200-5.495-1.083%205.03%205.03%200%200%200-2.26%201.848%204.984%204.984%200%200%200%20.631%206.315%205.054%205.054%200%200%200%203.551%201.466z%22%20fill%3D%22%238A1E16%22%2F%3E%3C%2Fsvg%3E" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 29px; height: 48px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 985; transform: matrix(1, 0, 0, 1, -212, -110);"><div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="./vt" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="./vt(1)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="./vt(2)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="./vt(3)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="./vt(4)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="./vt(5)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="./vt(6)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="./vt(7)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="./vt(8)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="./vt(9)" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;"><p class="gm-style-pbt"></p></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;"><div style="z-index: 4; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"><div title="" style="width: 29px; height: 48px; overflow: hidden; position: absolute; opacity: 0.0001; cursor: pointer; touch-action: none; left: -15px; top: -48px; z-index: 0;"><img alt="" src="data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2229%22%20height%3D%2248%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20opacity%3D%22.1%22%20d%3D%22M14.277%2048c2.38%200%204.307-1.473%204.307-3.29s-1.928-3.29-4.306-3.29c-2.38%200-4.307%201.473-4.307%203.29S11.899%2048%2014.277%2048z%22%20fill%3D%22%23000%22%2F%3E%3Cpath%20opacity%3D%22.1%22%20d%3D%22M14.344%2046.764c1.474%200%202.668-.911%202.668-2.036%200-1.124-1.194-2.035-2.668-2.035-1.474%200-2.668.911-2.668%202.035%200%201.125%201.194%202.036%202.668%202.036z%22%20fill%3D%22%23000%22%2F%3E%3Cpath%20d%3D%22M4.672%204.359A13.694%2013.694%200%200%201%2014.29.378c1.794.002%203.57.355%205.227%201.039a13.655%2013.655%200%200%201%204.429%202.95%2013.557%2013.557%200%200%201%202.953%204.409%2013.489%2013.489%200%200%201%201.029%205.195c-.011.749-.087%201.496-.226%202.232h0l-.002.008a13.392%2013.392%200%200%201-2.153%205.35l-.007.01-.006.01a74.078%2074.078%200%200%201-1.936%203.095l-.194.279c-4.03%205.783-8.12%2011.654-8.407%2019.443a1.177%201.177%200%200%201-.283.522c-.157.168-.318.243-.447.243-.298%200-.605-.217-.731-.771-.37-7.851-4.415-13.823-8.543-19.714-.719-1.12-1.389-2.169-1.981-3.172l-.006-.01-.006-.01A13.128%2013.128%200%200%201%20.91%2016.14l-.001-.008-.002-.008a11.762%2011.762%200%200%201-.225-2.205%2013.52%2013.52%200%200%201%203.99-9.56z%22%20fill%3D%22%23D85040%22%20stroke%3D%22%23C74D40%22%20stroke-width%3D%22.756%22%2F%3E%3Cpath%20d%3D%22M14.3%202.454c2.443.036%204.841.667%206.984%201.837a14.933%2014.933%200%200%201%205.305%204.874A13.118%2013.118%200%200%200%2021.744%203.1%2013.244%2013.244%200%200%200%2014.299.811c-2.657%200-5.252.798-7.445%202.288A13.119%2013.119%200%200%200%202.01%209.165a14.933%2014.933%200%200%201%205.305-4.874c2.142-1.17%204.54-1.801%206.984-1.837z%22%20fill%3D%22rgba(255%2C%20255%2C%20255%2C%200.2)%22%2F%3E%3Cpath%20d%3D%22M14.206%2018.876a5.06%205.06%200%200%200%202.803-.84%205.013%205.013%200%200%200%201.86-2.245%204.978%204.978%200%200%200-1.09-5.461%205.067%205.067%200%200%200-5.495-1.083%205.03%205.03%200%200%200-2.26%201.848%204.984%204.984%200%200%200%20.631%206.315%205.054%205.054%200%200%200%203.551%201.466z%22%20fill%3D%22%238A1E16%22%2F%3E%3C%2Fsvg%3E" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 29px; height: 48px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div></div><iframe aria-hidden="true" frameborder="0" tabindex="-1" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none;" src="./saved_resource.html"></iframe><div></div><div></div><div></div><div></div><div><button draggable="false" title="Toggle fullscreen view" aria-label="Toggle fullscreen view" type="button" style="background: none rgb(255, 255, 255); display: none; border: 0px; margin: 10px; padding: 0px; text-transform: none; appearance: none; position: absolute; cursor: pointer; user-select: none; top: 0px; right: 0px;"></button></div><div></div><div></div><div></div><div></div><div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="40" controlheight="81" style="margin: 10px; user-select: none; position: absolute; bottom: 95px; right: 40px;"><div class="gmnoprint" controlwidth="40" controlheight="40" style="display: none; position: absolute;"><div style="width: 40px; height: 40px;"><button draggable="false" title="Rotate map 90 degrees" aria-label="Rotate map 90 degrees" type="button" class="gm-control-active" style="background: none rgb(255, 255, 255); display: none; border: 0px; margin: 0px 0px 32px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; width: 40px; height: 40px; top: 0px; left: 0px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2222%22%20viewBox%3D%220%200%2024%2022%22%3E%0A%20%20%3Cpath%20fill%3D%22%23666%22%20fill-rule%3D%22evenodd%22%20d%3D%22M20%2010c0-5.52-4.48-10-10-10s-10%204.48-10%2010v5h5v-5c0-2.76%202.24-5%205-5s5%202.24%205%205v5h-4l6.5%207%206.5-7h-4v-5z%22%20clip-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2222%22%20viewBox%3D%220%200%2024%2022%22%3E%0A%20%20%3Cpath%20fill%3D%22%23333%22%20fill-rule%3D%22evenodd%22%20d%3D%22M20%2010c0-5.52-4.48-10-10-10s-10%204.48-10%2010v5h5v-5c0-2.76%202.24-5%205-5s5%202.24%205%205v5h-4l6.5%207%206.5-7h-4v-5z%22%20clip-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2222%22%20viewBox%3D%220%200%2024%2022%22%3E%0A%20%20%3Cpath%20fill%3D%22%23111%22%20fill-rule%3D%22evenodd%22%20d%3D%22M20%2010c0-5.52-4.48-10-10-10s-10%204.48-10%2010v5h5v-5c0-2.76%202.24-5%205-5s5%202.24%205%205v5h-4l6.5%207%206.5-7h-4v-5z%22%20clip-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"></button><button draggable="false" title="Tilt map" aria-label="Tilt map" type="button" class="gm-tilt gm-control-active" style="background: none rgb(255, 255, 255); display: block; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; width: 40px; height: 40px; top: 0px; left: 0px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218px%22%20height%3D%2216px%22%20viewBox%3D%220%200%2018%2016%22%3E%0A%20%20%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%2C16h8V9H0V16z%20M10%2C16h8V9h-8V16z%20M0%2C7h8V0H0V7z%20M10%2C0v7h8V0H10z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218px%22%20height%3D%2216px%22%20viewBox%3D%220%200%2018%2016%22%3E%0A%20%20%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%2C16h8V9H0V16z%20M10%2C16h8V9h-8V16z%20M0%2C7h8V0H0V7z%20M10%2C0v7h8V0H10z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218px%22%20height%3D%2216px%22%20viewBox%3D%220%200%2018%2016%22%3E%0A%20%20%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%2C16h8V9H0V16z%20M10%2C16h8V9h-8V16z%20M0%2C7h8V0H0V7z%20M10%2C0v7h8V0H10z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="width: 18px;"></button></div></div><div class="gmnoprint" controlwidth="40" controlheight="81" style="position: absolute; left: 0px; top: 0px;"><div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 40px; height: 81px;"><button draggable="false" title="Zoom in" aria-label="Zoom in" type="button" class="gm-control-active" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; overflow: hidden; width: 40px; height: 40px; top: 0px; left: 0px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2218%2C7%2011%2C7%2011%2C0%207%2C0%207%2C7%200%2C7%200%2C11%207%2C11%207%2C18%2011%2C18%2011%2C11%2018%2C11%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpolygon%20fill%3D%22%23333%22%20points%3D%2218%2C7%2011%2C7%2011%2C0%207%2C0%207%2C7%200%2C7%200%2C11%207%2C11%207%2C18%2011%2C18%2011%2C11%2018%2C11%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpolygon%20fill%3D%22%23111%22%20points%3D%2218%2C7%2011%2C7%2011%2C0%207%2C0%207%2C7%200%2C7%200%2C11%207%2C11%207%2C18%2011%2C18%2011%2C11%2018%2C11%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"></button><div style="position: relative; overflow: hidden; width: 30px; height: 1px; margin: 0px 5px; background-color: rgb(230, 230, 230); top: 0px;"></div><button draggable="false" title="Zoom out" aria-label="Zoom out" type="button" class="gm-control-active" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; overflow: hidden; width: 40px; height: 40px; top: 0px; left: 0px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%2C7h18v4H0V7z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%2C7h18v4H0V7z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%2C7h18v4H0V7z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"></button></div></div></div></div><div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" rel="noopener" href="https://maps.google.com/maps?ll=28.59001,77.297901&amp;z=15&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" title="Open this area in Google Maps (opens a new window)" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img alt="" src="./google4_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div></div><div></div><div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 166px; bottom: 0px; width: 86px;"><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="text-decoration: none; cursor: pointer; display: none;">Map Data</a><span>Map data ©2021</span></div></div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 95px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" rel="noopener" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_blank" rel="noopener" title="Report errors in the road map or imagery to Google" dir="ltr" href="https://www.google.com/maps/@28.5900103,77.2979007,15z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2021</div></div></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-sizing: border-box; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 300px; height: 180px; position: absolute; left: 318px; top: 35px;"><div style="padding: 0px 0px 10px; font-size: 16px; box-sizing: border-box;">Map Data</div><div style="font-size: 13px;">Map data ©2021</div><button draggable="false" title="Close" aria-label="Close" type="button" class="gm-ui-hover-effect" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: absolute; cursor: pointer; user-select: none; top: 0px; right: 0px; width: 37px; height: 37px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%23000000%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M19%206.41L17.59%205%2012%2010.59%206.41%205%205%206.41%2010.59%2012%205%2017.59%206.41%2019%2012%2013.41%2017.59%2019%2019%2017.59%2013.41%2012z%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="pointer-events: none; display: block; width: 13px; height: 13px; margin: 12px;"></button></div></div></div></div>
+	</div>
+
+	
+	
+	</body></html>

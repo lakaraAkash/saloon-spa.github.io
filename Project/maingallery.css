@@ -1,0 +1,136 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/*Navbar*/
+.navbar-dark{
+	background: rgba(2, 2, 2, 0.63);
+}
+
+.navbar-dark .navbar-nav .nav-link{
+	color: yellow!important;
+	letter-spacing: 1px;
+	font-size: 16px;
+	position: relative;
+	padding: 10px 15px;
+}
+.navbar-dark .navbar-nav .nav-item{
+	margin: 0px 5px;
+}
+.navbar-dark .navbar-nav .nav-item span{
+	position: relative;
+	z-index: 2;
+}
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav 
+.nav-link:focus{
+	color: yellow;
+	background: #000;
+}
+.navbar-dark .navbar-nav .nav-link.active{	
+	color: yellow;
+	background: #000;
+}
+.navbar-dark .navbar-nav .nav-link::after {
+    content: '';
+    width: 0;
+    height: 5px;
+    background: #0a0a0a;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+	right: 0;
+	text-align: center;
+	margin: 0 auto;
+    border-radius: 0px;
+    transition: all .5s;
+    z-index: 0;
+}
+.navbar-dark .navbar-nav .nav-link.active:after{
+    width:84.5%;
+    height: 100%;
+}
+.navbar-toggler{
+    outline:none!important;
+}
+/*End of Navbar*/
+/*Hero Section*/
+.hero{
+    min-height: 660px;
+    overflow:hidden;
+    background-image: linear-gradient(rgba(255,255,0,0.5),rgba(17,17,6,0.5)),
+    url("./images/spa-equip.jpg");
+    background-position: bottom;
+    background-size:cover;
+}
+.card{
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.175,0.885,0.32,1.275);
+}
+.card:hover{
+    transform: scale(1.5);
+}
+.card-img-top{
+    height:300px;
+    object-fit: cover;
+}
+
+/*End of Hero Section*/
+/*About Section*/
+.about-container{
+    overflow:hidden;
+}
+@media (min-width:1200px){
+    .about-container{
+        padding-top:75px;
+        padding-bottom:50px;
+    }
+}
+.about-img{
+    position: relative;
+}
+@media (min-width:1200px){
+    .about-img{
+        left:165px;
+    }
+}
+.about-img-small{
+    position: absolute;
+    bottom:-55px;
+    right:50px;
+}
+@media (min-width:992px){
+    .about-img-small{
+        left:-180px;
+    }
+}
+@media (min-width:992px){
+    .about-content{
+        margin-top:60px;
+        }
+}
+.about-content p{
+    margin-top:18px;
+    margin-bottom:35px;
+}
+.main-btn{
+    cursor: pointer;
+}
+.btn-hover{
+    margin:20px auto;
+    border:none;
+    padding:10px 44px;
+    font-size:20px;
+    position:relative;
+    display:inline-block;
+
+}
+.btn-hover:before{
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    content:"";
+    width:50%;
+    height: 100%;
+    background: #000;
+    position:absolute;
+    top:0;
+    left:0;
+    border-radius: 10px 0px 0px 10px;
+}
